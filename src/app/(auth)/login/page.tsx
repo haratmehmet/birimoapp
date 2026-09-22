@@ -17,7 +17,7 @@ export default function LoginPage() {
 
       <div className="relative z-10 w-full max-w-md space-y-8 rounded-3xl bg-white/90 backdrop-blur-xl p-10 shadow-[0_20px_60px_rgb(0,74,173,0.15)] border border-white">
         <div className="flex flex-col items-center text-center">
-          <img src="/images/logo.png" alt="birimO" className="h-14 w-auto object-contain mb-4" />
+          <img src="/images/Logo.png" alt="birimO" className="h-14 w-auto object-contain mb-4" />
           <h2 className="text-xl font-extrabold text-[#004aad] tracking-tight">
             Birebir Eğitim Yönetim Sistemi
           </h2>

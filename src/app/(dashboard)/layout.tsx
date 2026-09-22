@@ -133,7 +133,7 @@ export default async function DashboardLayout({ children }: { children: ReactNod
         {/* Sidebar - Floating Soft Glassmorphism */}
         <aside className="w-68 m-4 mr-0 rounded-2xl glass-panel flex-shrink-0 hidden lg:flex flex-col relative z-20 border border-white/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] overflow-hidden print:hidden">
         <div className="h-24 flex flex-col justify-center pl-10 pr-6 bg-white/40 border-b border-white/50 backdrop-blur-sm">
-          <img src="/images/logo.png" alt="birimO" className="h-11 w-auto object-contain object-left mb-1" />
+          <img src="/images/Logo.png" alt="birimO" className="h-11 w-auto object-contain object-left mb-1" />
           <span className="text-[10px] font-bold text-gray-500 tracking-tight">Birebir Eğitim Yönetim Sistemi</span>
         </div>
         <div className="flex-1 overflow-y-auto py-4 px-3 custom-scrollbar relative z-10">
