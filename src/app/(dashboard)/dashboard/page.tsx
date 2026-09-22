@@ -275,20 +275,6 @@ export default async function DashboardPage() {
             {isTeacher ? 'Öğretmen Paneli • Birebir Eğitim Yönetim Sistemi' : 'Birebir Eğitim Yönetim Sistemi'}
           </p>
         </div>
-
-        {/* Siteyi Ziyaret Et Butonu */}
-        <div className="flex items-center gap-3">
-          <Link
-            href="/"
-            target="_blank"
-            className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 hover:border-[#004aad]/40 hover:bg-blue-50/50 text-[#004aad] text-xs font-bold rounded-xl shadow-sm hover:shadow transition-all duration-200 group"
-            title="Site ana sayfasını yeni sekmede aç"
-          >
-            <Globe className="w-4 h-4 text-[#ff914d] group-hover:scale-110 transition-transform" />
-            <span>Siteyi Ziyaret Et</span>
-            <ExternalLink className="w-3.5 h-3.5 text-gray-400 group-hover:text-[#004aad]" />
-          </Link>
-        </div>
       </div>
 
       {/* 2. Stats Row */}
