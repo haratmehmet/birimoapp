@@ -52,7 +52,7 @@ export function MobileSidebar({ organizationId, userRole, teacherId, userPermiss
     },
     { name: 'Sistem Logları', href: '/admin/logs', icon: ShieldAlert, show: organizationId === null, divider: true },
     { name: 'Öğretmenler', href: '/teachers', icon: GraduationCap, show: organizationId !== null && !isTeacher && userPermissions?.teachers !== false },
-    { name: isTeacher ? 'Öğrencilerim' : 'Öğrenciler', href: '/students', icon: '/images/student.png', show: organizationId !== null && userPermissions?.students !== false },
+    { name: isTeacher ? 'Öğrencilerim' : 'Öğrenciler', href: '/students', icon: Users, show: organizationId !== null && userPermissions?.students !== false },
     { name: 'Eğitim Talepleri', href: '/requests', icon: BookOpen, show: organizationId !== null && !isTeacher && userPermissions?.requests !== false },
     { 
       name: isTeacher ? 'Ders Programım' : 'Planlama ve Takvim', 

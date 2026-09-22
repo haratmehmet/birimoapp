@@ -91,9 +91,7 @@ export function StudentDetailClient({ student, packages, plannedSchedules = [], 
             <div className="absolute top-0 right-0 w-32 h-32 bg-indigo-50 rounded-bl-full -mr-10 -mt-10 pointer-events-none"></div>
             
             <div className="flex items-center gap-4 mb-6 relative">
-              <div className="w-16 h-16 rounded-full bg-indigo-100 text-indigo-700 flex items-center justify-center font-bold text-xl border-2 border-white shadow-sm">
-                {student.firstName[0]}{student.lastName[0]}
-              </div>
+              <img src="/images/student.png" alt="Öğrenci" className="w-16 h-16 rounded-full bg-indigo-50 border-2 border-white shadow-sm shrink-0 object-contain p-2" />
               <div>
                 <h2 className="text-xl font-bold text-gray-900">{student.firstName} {student.lastName}</h2>
                 <div className="flex flex-wrap items-center gap-2 mt-1">

@@ -241,9 +241,7 @@ export function StudentsClient({ students, isTeacher = false }: { students: any[
                   <div key={s.id} onClick={() => router.push(`/students/${s.id}`)} className="bg-white border border-gray-100 rounded-2xl p-4 shadow-sm relative overflow-hidden">
                     <div className="flex items-start justify-between mb-3 border-b border-gray-50 pb-3">
                       <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 rounded-full bg-slate-100 text-slate-700 flex items-center justify-center font-bold text-sm border border-slate-200 shrink-0">
-                          {s.firstName[0]}{s.lastName[0]}
-                        </div>
+                        <img src="/images/student.png" alt="Öğrenci" className="w-10 h-10 rounded-full bg-slate-50 border border-slate-200 shrink-0 object-contain p-1.5" />
                         <div>
                           <h4 className="font-bold text-gray-900">{s.firstName} {s.lastName}</h4>
                           <p className="text-xs text-gray-500 mt-0.5">{s.educationLevel || '-'} / Sınıf: {s.grade || '-'}</p>
@@ -361,9 +359,7 @@ export function StudentsClient({ students, isTeacher = false }: { students: any[
                   >
                     <td className="px-6 py-4 whitespace-nowrap">
                       <div className="flex items-center gap-3">
-                        <div className="w-9 h-9 rounded-full bg-slate-100 text-slate-700 flex items-center justify-center font-bold text-xs border border-slate-200">
-                          {s.firstName[0]}{s.lastName[0]}
-                        </div>
+                        <img src="/images/student.png" alt="Öğrenci" className="w-9 h-9 rounded-full bg-slate-50 border border-slate-200 shrink-0 object-contain p-1.5" />
                         <div>
                           <div className="text-sm font-semibold text-gray-800">{s.firstName} {s.lastName}</div>
                         </div>

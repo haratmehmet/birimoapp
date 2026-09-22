@@ -77,7 +77,7 @@ export default async function DashboardLayout({ children }: { children: ReactNod
     },
     { name: 'Sistem Logları', href: '/admin/logs', icon: ShieldAlert, show: user.organizationId === null, divider: true },
     { name: 'Öğretmenler', href: '/teachers', icon: GraduationCap, show: user.organizationId !== null && !isTeacher && userPerms.teachers !== false },
-    { name: isTeacher ? 'Öğrencilerim' : 'Öğrenciler', href: '/students', icon: '/images/student.png', show: user.organizationId !== null && userPerms.students !== false },
+    { name: isTeacher ? 'Öğrencilerim' : 'Öğrenciler', href: '/students', icon: Users, show: user.organizationId !== null && userPerms.students !== false },
     { name: 'Eğitim Talepleri', href: '/requests', icon: BookOpen, show: user.organizationId !== null && !isTeacher && userPerms.requests !== false },
     { 
       name: isTeacher ? 'Ders Programım' : 'Planlama ve Takvim', 
