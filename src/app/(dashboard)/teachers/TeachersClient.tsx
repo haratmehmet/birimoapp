@@ -307,9 +307,7 @@ function TeacherRow({ teacher, subjects, router }: { teacher: any, subjects: any
       >
         <td className="px-6 py-4 whitespace-nowrap">
           <div className="flex items-center gap-3">
-            <div className={`w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm shadow-sm border border-white ${isExternal ? 'bg-orange-200 text-orange-800' : badgeColorClass}`}>
-              {teacher.firstName?.[0]}{teacher.lastName?.[0]}
-            </div>
+            <img src="/images/teacher.png" alt="Öğretmen" className={`w-10 h-10 rounded-full flex items-center justify-center shadow-sm border border-white shrink-0 object-contain p-1.5 ${isExternal ? 'bg-orange-200' : badgeColorClass}`} />
             <div>
               <div className="flex items-center gap-2">
                 <p className={`font-bold transition-colors ${isExternal ? 'text-orange-950 group-hover:text-orange-700' : 'text-gray-900 group-hover:text-primary'}`}>
@@ -623,9 +621,7 @@ function TeacherCard({ teacher, subjects, router }: { teacher: any, subjects: an
       >
         <div className="flex items-start justify-between mb-3 border-b border-gray-50 pb-3">
           <div className="flex items-center gap-3">
-            <div className={`w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm shadow-sm border border-white ${isExternal ? 'bg-orange-200 text-orange-800' : badgeColorClass}`}>
-              {teacher.firstName?.[0]}{teacher.lastName?.[0]}
-            </div>
+            <img src="/images/teacher.png" alt="Öğretmen" className={`w-10 h-10 rounded-full flex items-center justify-center shadow-sm border border-white shrink-0 object-contain p-1.5 ${isExternal ? 'bg-orange-200' : badgeColorClass}`} />
             <div>
               <div className="flex items-center gap-2">
                 <h4 className={`font-bold ${isExternal ? 'text-orange-950' : 'text-gray-900'}`}>

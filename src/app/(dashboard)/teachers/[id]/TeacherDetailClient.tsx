@@ -113,9 +113,7 @@ export function TeacherDetailClient({ teacher, orgSettings, isTeacher = false }:
         <div className="lg:col-span-1 space-y-6">
           <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
             <div className="p-6 text-center border-b border-gray-100 bg-gray-50/50">
-              <div className={`w-24 h-24 mx-auto rounded-full flex items-center justify-center text-3xl font-bold shadow-md border-4 border-white mb-4 ${badgeColorClass}`}>
-                {teacher.firstName?.[0]}{teacher.lastName?.[0]}
-              </div>
+              <img src="/images/teacher.png" alt="Öğretmen" className={`w-24 h-24 mx-auto rounded-full shadow-md border-4 border-white mb-4 object-contain p-3 ${badgeColorClass}`} />
               <h2 className="text-xl font-bold text-gray-900">
                 {teacher.firstName} {teacher.lastName}
               </h2>
@@ -359,9 +357,7 @@ export function TeacherDetailClient({ teacher, orgSettings, isTeacher = false }:
                             <div key={s.studentId} className="bg-white border border-gray-100 rounded-xl p-4 shadow-sm flex flex-col gap-3">
                               <div className="flex items-center justify-between">
                                 <div className="flex items-center gap-3">
-                                  <div className="w-8 h-8 rounded-full bg-indigo-50 text-indigo-700 flex items-center justify-center font-bold text-xs">
-                                    {s.firstName?.[0]}{s.lastName?.[0]}
-                                  </div>
+                                  <img src="/images/student.png" alt="Öğrenci" className="w-8 h-8 rounded-full bg-indigo-50 border border-indigo-100 shrink-0 object-contain p-1" />
                                   <span className="font-bold text-gray-900 text-sm">{s.firstName} {s.lastName}</span>
                                 </div>
                                 <span className="inline-flex items-center justify-center px-2.5 py-1 rounded-md bg-amber-50 text-amber-700 font-bold text-xs border border-amber-100">
@@ -390,9 +386,7 @@ export function TeacherDetailClient({ teacher, orgSettings, isTeacher = false }:
                                 <tr key={s.studentId} className="hover:bg-gray-50/50 transition-colors">
                                   <td className="p-4 pl-6">
                                     <div className="flex items-center gap-3">
-                                      <div className="w-8 h-8 rounded-full bg-indigo-50 text-indigo-700 flex items-center justify-center font-bold text-xs">
-                                        {s.firstName?.[0]}{s.lastName?.[0]}
-                                      </div>
+                                      <img src="/images/student.png" alt="Öğrenci" className="w-8 h-8 rounded-full bg-indigo-50 border border-indigo-100 shrink-0 object-contain p-1" />
                                       <span className="font-semibold text-gray-900 text-sm">{s.firstName} {s.lastName}</span>
                                     </div>
                                   </td>

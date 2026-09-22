@@ -117,9 +117,7 @@ function PoolRow({ teacher, router }: { teacher: any, router: any }) {
       >
         <td className="px-6 py-4">
           <div className="flex items-center gap-3">
-            <div className={`w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm shadow-sm border border-white flex-shrink-0 ${teacher.gender === 'FEMALE' ? 'bg-pink-100 text-pink-700' : teacher.gender === 'MALE' ? 'bg-blue-100 text-blue-700' : 'bg-gray-100 text-gray-700'}`}>
-              {teacher.firstName?.charAt(0)}{teacher.lastName?.charAt(0)}
-            </div>
+            <img src="/images/teacher.png" alt="Öğretmen" className={`w-10 h-10 rounded-full flex items-center justify-center shadow-sm border border-white flex-shrink-0 object-contain p-1.5 ${teacher.gender === 'FEMALE' ? 'bg-pink-100' : teacher.gender === 'MALE' ? 'bg-blue-100' : 'bg-gray-100'}`} />
             <div>
               <div className="font-bold text-gray-900">{teacher.firstName} {teacher.lastName}</div>
               <div className="text-xs text-gray-500 flex items-center gap-1 mt-0.5">
@@ -236,9 +234,7 @@ function PoolCard({ teacher, router }: { teacher: any, router: any }) {
       >
         <div className="flex items-start justify-between mb-3 border-b border-gray-50 pb-3">
           <div className="flex items-center gap-3">
-            <div className={`w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm shadow-sm border border-white flex-shrink-0 ${teacher.gender === 'FEMALE' ? 'bg-pink-100 text-pink-700' : teacher.gender === 'MALE' ? 'bg-blue-100 text-blue-700' : 'bg-gray-100 text-gray-700'}`}>
-              {teacher.firstName?.charAt(0)}{teacher.lastName?.charAt(0)}
-            </div>
+            <img src="/images/teacher.png" alt="Öğretmen" className={`w-10 h-10 rounded-full flex items-center justify-center shadow-sm border border-white flex-shrink-0 object-contain p-1.5 ${teacher.gender === 'FEMALE' ? 'bg-pink-100' : teacher.gender === 'MALE' ? 'bg-blue-100' : 'bg-gray-100'}`} />
             <div>
               <div className="font-bold text-gray-900">{teacher.firstName} {teacher.lastName}</div>
               <div className="text-xs text-gray-500 flex items-center gap-1 mt-0.5">
