@@ -19,32 +19,16 @@ export default async function Image() {
           width: '100%',
           height: '100%',
           display: 'flex',
-          flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'center',
-          border: '20px solid #f9fafb',
         }}
       >
         <img 
           src={logoBase64}
           alt="Logo" 
-          height="200"
+          width="600"
           style={{ objectFit: 'contain' }}
         />
-        <div style={{
-          marginTop: 60,
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          color: '#1f2937',
-        }}>
-          <h1 style={{ fontSize: 52, fontWeight: 800, margin: 0, color: '#004aad' }}>
-            Birebir Eğitim Yönetim Sistemi
-          </h1>
-          <p style={{ fontSize: 26, fontWeight: 500, marginTop: 20, color: '#6b7280' }}>
-            Modern, Premium Eğitim Yönetim Platformu
-          </p>
-        </div>
       </div>
     ),
     { ...size }
