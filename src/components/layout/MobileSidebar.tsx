@@ -82,7 +82,7 @@ export function MobileSidebar({ organizationId, userRole, teacherId, userPermiss
     <>
       <button
         onClick={() => setIsOpen(true)}
-        className="p-2 -mr-2 text-gray-600 hover:text-gray-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#004aad]"
+        className="p-2 -ml-2 text-gray-600 hover:text-gray-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#004aad]"
       >
         <Menu className="w-6 h-6" />
       </button>

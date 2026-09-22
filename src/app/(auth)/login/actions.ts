@@ -59,9 +59,11 @@ export async function loginAction(prevState: any, formData: FormData) {
     return { error: 'Geçersiz kullanıcı adı veya şifre.' };
   }
 
+  const remember = formData.get('remember') === 'on';
+
   const token = generateSessionToken();
-  const session = await createSession(token, user.id);
-  await setSessionTokenCookie(token, session.expiresAt);
+  const session = await createSession(token, user.id, remember);
+  await setSessionTokenCookie(token, session.expiresAt, remember);
 
   const panelName = user.organizationId === null ? 'Süper Admin Paneli' : 'Kurum Paneli';
 

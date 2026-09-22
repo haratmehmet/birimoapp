@@ -11,12 +11,12 @@ export function generateSessionToken(): string {
   return encodeBase32LowerCaseNoPadding(bytes);
 }
 
-export async function createSession(token: string, userId: string): Promise<typeof sessions.$inferSelect> {
+export async function createSession(token: string, userId: string, remember: boolean = true): Promise<typeof sessions.$inferSelect> {
   const sessionId = encodeHexLowerCase(new TextEncoder().encode(token));
   const session = {
     id: sessionId,
     userId,
-    expiresAt: new Date(Date.now() + 1000 * 60 * 60 * 24 * 30) // 30 days
+    expiresAt: new Date(Date.now() + 1000 * 60 * 60 * 24 * (remember ? 30 : 1)) // 30 days if remember, 1 day if not
   };
   await db.insert(sessions).values(session);
   return session;
@@ -84,15 +84,21 @@ export async function invalidateSession(sessionId: string): Promise<void> {
   await db.delete(sessions).where(eq(sessions.id, sessionId));
 }
 
-export async function setSessionTokenCookie(token: string, expiresAt: Date) {
+export async function setSessionTokenCookie(token: string, expiresAt: Date, remember: boolean = true) {
   const cookieStore = await cookies();
-  cookieStore.set('session', token, {
+  const cookieOptions: any = {
     httpOnly: true,
     sameSite: 'lax',
     secure: process.env.NODE_ENV === 'production',
-    expires: expiresAt,
     path: '/'
-  });
+  };
+  
+  // If remember is true, set the cookie to expire in 30 days. Otherwise, it will be a session cookie (expires on browser close)
+  if (remember) {
+    cookieOptions.expires = expiresAt;
+  }
+  
+  cookieStore.set('session', token, cookieOptions);
 }
 
 export async function deleteSessionTokenCookie() {

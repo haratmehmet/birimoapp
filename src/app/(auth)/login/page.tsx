@@ -58,6 +58,19 @@ export default function LoginPage() {
             </div>
           </div>
 
+          <div className="flex items-center ml-1">
+            <input
+              id="remember-me"
+              name="remember"
+              type="checkbox"
+              defaultChecked
+              className="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary/20 transition-all cursor-pointer"
+            />
+            <label htmlFor="remember-me" className="ml-2 block text-sm font-medium text-gray-700 cursor-pointer select-none">
+              Beni Hatırla
+            </label>
+          </div>
+
           {state?.error && (
             <div className="text-sm text-red-600 bg-red-50 border border-red-100 p-3 rounded-xl text-center font-medium animate-in fade-in">
               {state.error}
