@@ -109,7 +109,7 @@ export function MobileSidebar({ organizationId, userRole, teacherId, userPermiss
         </div>
 
         <div className="h-16 flex items-center justify-between px-6 border-b border-gray-100 relative">
-          <img src="/images/logo.png" alt="birimO" className="h-8 w-auto object-contain" />
+          <img src="/images/Logo.png" alt="birimO" className="h-8 w-auto object-contain" />
           <button 
             onClick={() => setIsOpen(false)}
             className="p-2 -mr-2 text-gray-400 hover:text-gray-900 rounded-lg"

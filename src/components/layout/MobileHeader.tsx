@@ -32,7 +32,7 @@ export function MobileHeader({ organizationId, userRole, notificationCount = 0, 
           </button>
         )}
         <div className="flex flex-col justify-center">
-          <img src="/images/logo.png" alt="birimO" className="h-6 sm:h-7 w-auto object-contain" />
+          <img src="/images/Logo.png" alt="birimO" className="h-6 sm:h-7 w-auto object-contain" />
           <span className="text-[8px] sm:text-[9px] font-bold text-gray-500 tracking-wider uppercase mt-0.5">Birebir Eğitim Yönetimi</span>
         </div>
       </div>

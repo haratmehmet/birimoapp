@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     siteName: "birimO App",
     images: [
       {
-        url: "/images/logo.png",
+        url: "/images/Logo.png",
         width: 300,
         height: 100,
         alt: "birimO Logo",
