@@ -224,9 +224,7 @@ export function UsersClient({ users, roles }: { users: UserItem[], roles: Role[]
             </div>
             <div className="p-6 space-y-4">
               <div className="flex items-center gap-3 mb-6 p-4 bg-gray-50 rounded-xl relative">
-                <div className="w-10 h-10 rounded-full bg-indigo-100 text-indigo-600 flex items-center justify-center font-bold text-lg">
-                  {editUser.firstName?.[0] || ''}{editUser.lastName?.[0] || ''}
-                </div>
+                <img src={editUser.role?.toLowerCase().includes('teacher') ? "/images/teacher.png" : "/images/admin.png"} alt="Kullanıcı" className="w-10 h-10 rounded-full bg-slate-50 border border-slate-200 shrink-0 object-contain p-1.5 shadow-sm" />
                 <div>
                   <div className="font-bold text-gray-900">{editUser.firstName || ''} {editUser.lastName || ''}</div>
                   <div className="text-xs text-gray-500">{editUser.role?.toLowerCase().includes('admin') ? 'Yönetici' : 'Öğretmen'}</div>

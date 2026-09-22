@@ -234,9 +234,7 @@ export default async function DashboardLayout({ children }: { children: ReactNod
                 {user?.role === 'STAFF' ? 'Yetkili' : (user?.role === 'TEACHER' ? 'Öğretmen' : (user?.organizationId === null ? 'Süper Admin' : 'Kurum Yöneticisi'))}
               </span>
             </div>
-            <div className="h-10 w-10 rounded-full bg-gradient-to-tr from-primary/20 to-primary/5 border border-white flex items-center justify-center shadow-sm">
-              <span className="text-primary font-bold">{user?.firstName?.[0]}</span>
-            </div>
+            <img src={user?.role === 'TEACHER' ? "/images/teacher.png" : "/images/admin.png"} alt="Profil" className="h-10 w-10 rounded-full bg-slate-50 border border-slate-200 shadow-sm shrink-0 object-contain p-1.5" />
             <div className="w-px h-6 bg-gray-200 mx-2" />
             <form action={async () => {
               'use server';

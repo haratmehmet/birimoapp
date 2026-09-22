@@ -1298,9 +1298,7 @@ export function OrganizationsClient({ organizations }: OrganizationsClientProps)
                         className="bg-white border border-gray-200 rounded-2xl p-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-3 shadow-2xs hover:border-[#004aad]/30 transition-all"
                       >
                         <div className="flex items-center gap-3">
-                          <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-blue-100 to-indigo-100 text-[#004aad] font-black flex items-center justify-center text-xs border border-blue-200 flex-shrink-0">
-                            {staff.firstName?.[0] || 'Y'}
-                          </div>
+                          <img src="/images/admin.png" alt="Yönetici" className="w-9 h-9 rounded-xl bg-slate-50 border border-slate-200 shrink-0 object-contain p-1 shadow-sm" />
                           <div>
                             <div className="flex items-center gap-2">
                               <span className="text-xs font-black text-gray-900">

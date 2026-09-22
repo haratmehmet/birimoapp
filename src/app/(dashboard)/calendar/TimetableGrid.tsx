@@ -313,9 +313,7 @@ export function TimetableGrid({
                     onClick={() => mode === 'planning' && setScheduleModalTeacher({ id: teacher.teacherId, name: `${teacher.firstName} ${teacher.lastName}`, subjectId: teacher.subjectId })}
                     className={`w-44 shrink-0 p-2 border-r flex items-center gap-2 sticky left-0 z-10 transition-colors ${mode === 'planning' ? 'cursor-pointer' : ''} ${isExternal ? 'bg-orange-50 border-orange-100 group-hover:bg-orange-100' : 'bg-white border-gray-200 group-hover:bg-gray-50'}`}
                   >
-                    <div className={`w-7 h-7 rounded-full flex items-center justify-center font-bold text-[10px] ${isExternal ? 'bg-orange-200/60 text-orange-800' : 'bg-indigo-100 text-indigo-700'}`}>
-                      {teacher.firstName[0]}{teacher.lastName[0]}
-                    </div>
+                    <img src="/images/teacher.png" alt="Öğretmen" className={`w-7 h-7 rounded-full shrink-0 object-contain p-1 ${isExternal ? 'bg-orange-200/60' : 'bg-indigo-50 border border-indigo-100'}`} />
                     <span className={`font-semibold text-xs truncate ${isExternal ? 'text-orange-950' : 'text-gray-900'}`}>
                       {teacher.firstName} {teacher.lastName}
                     </span>

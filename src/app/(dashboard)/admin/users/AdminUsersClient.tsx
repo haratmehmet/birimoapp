@@ -753,9 +753,7 @@ export function AdminUsersClient({ users, organizations, overrides = [] }: Admin
                     {/* 1. Kullanıcı Profil */}
                     <td className="px-6 py-4 whitespace-nowrap">
                       <div className="flex items-center gap-3.5">
-                        <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#004aad]/10 to-[#004aad]/5 text-[#004aad] font-black flex items-center justify-center text-sm border border-blue-100/80 flex-shrink-0 shadow-xs">
-                          {(u.firstName?.[0] || u.username[0] || 'U').toUpperCase()}
-                        </div>
+                        <img src={u.role === 'TEACHER' ? "/images/teacher.png" : "/images/admin.png"} alt="Kullanıcı" className="w-10 h-10 rounded-xl bg-slate-50 border border-slate-200 shrink-0 object-contain p-1.5 shadow-sm" />
                         <div>
                           <div className="text-sm font-black text-gray-900 flex items-center gap-1.5">
                             {u.firstName || u.lastName ? `${u.firstName || ''} ${u.lastName || ''}`.trim() : u.username}
