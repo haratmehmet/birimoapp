@@ -4,7 +4,7 @@ import { db } from '@/db';
 import { users } from '@/db/schema';
 import { eq } from 'drizzle-orm';
 import * as bcrypt from 'bcrypt';
-import { createSession, generateSessionToken, setSessionTokenCookie } from '@/lib/session';
+import { createSession, generateSessionToken, setSessionTokenCookie, deleteSessionTokenCookie } from '@/lib/session';
 import { logActivity } from '@/lib/audit';
 import { redirect } from 'next/navigation';
 import { headers } from 'next/headers';
@@ -79,4 +79,9 @@ export async function loginAction(prevState: any, formData: FormData) {
   });
 
   redirect('/dashboard');
+}
+
+export async function logoutAction() {
+  await deleteSessionTokenCookie();
+  redirect('/login');
 }

@@ -19,6 +19,7 @@ import {
   UserCheck,
   Building2,
   ShieldAlert,
+  LogOut,
   X
 } from 'lucide-react';
 
@@ -164,6 +165,23 @@ export function MobileSidebar({ organizationId, userRole, teacherId, userPermiss
               );
             })}
           </nav>
+        </div>
+
+        {/* Logout Button */}
+        <div className="p-4 border-t border-gray-100 bg-gray-50/50 shrink-0 mb-4 pb-8">
+          <form action={async () => {
+            // Import and call the server action here to avoid importing server functions at the top of a client component
+            const { logoutAction } = await import('@/app/(auth)/login/actions');
+            await logoutAction();
+          }}>
+            <button 
+              type="submit" 
+              className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-white border border-gray-200 text-red-600 hover:bg-red-50 hover:border-red-200 rounded-xl font-bold transition-colors shadow-sm"
+            >
+              <LogOut className="w-5 h-5" />
+              <span>Çıkış Yap</span>
+            </button>
+          </form>
         </div>
       </div>
     </>
