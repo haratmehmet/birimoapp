@@ -52,7 +52,7 @@ export function MobileSidebar({ organizationId, userRole, teacherId, userPermiss
     },
     { name: 'Sistem Logları', href: '/admin/logs', icon: ShieldAlert, show: organizationId === null, divider: true },
     { name: 'Öğretmenler', href: '/teachers', icon: GraduationCap, show: organizationId !== null && !isTeacher && userPermissions?.teachers !== false },
-    { name: isTeacher ? 'Öğrencilerim' : 'Öğrenciler', href: '/students', icon: Users, show: organizationId !== null && userPermissions?.students !== false },
+    { name: isTeacher ? 'Öğrencilerim' : 'Öğrenciler', href: '/students', icon: '/images/student.png', show: organizationId !== null && userPermissions?.students !== false },
     { name: 'Eğitim Talepleri', href: '/requests', icon: BookOpen, show: organizationId !== null && !isTeacher && userPermissions?.requests !== false },
     { 
       name: isTeacher ? 'Ders Programım' : 'Planlama ve Takvim', 
@@ -133,12 +133,16 @@ export function MobileSidebar({ organizationId, userRole, teacherId, userPermiss
                         : 'hover:bg-gray-50 text-gray-700 hover:text-[#004aad]'
                     }`}
                   >
+                  {typeof item.icon === 'string' ? (
+                    <img src={item.icon} alt={item.name} className={`mr-3 flex-shrink-0 h-[20px] w-[20px] object-contain transition-opacity duration-200 ${isActive ? 'opacity-100' : 'opacity-60 group-hover:opacity-100'}`} />
+                  ) : (
                     <item.icon 
                       className={`mr-3 flex-shrink-0 h-[20px] w-[20px] transition-colors duration-200 ${
                         isActive ? 'text-[#004aad]' : 'text-gray-400 group-hover:text-[#004aad]'
                       }`} 
-                      strokeWidth={isActive ? 2.5 : 2} 
+                      strokeWidth={isActive ? 2.5 : 2}
                     />
+                  )}
                     <span className="flex-1 truncate tracking-tight">{item.name}</span>
                   </Link>
                   {item.subItems && (

@@ -77,7 +77,7 @@ export default async function DashboardLayout({ children }: { children: ReactNod
     },
     { name: 'Sistem Logları', href: '/admin/logs', icon: ShieldAlert, show: user.organizationId === null, divider: true },
     { name: 'Öğretmenler', href: '/teachers', icon: GraduationCap, show: user.organizationId !== null && !isTeacher && userPerms.teachers !== false },
-    { name: isTeacher ? 'Öğrencilerim' : 'Öğrenciler', href: '/students', icon: Users, show: user.organizationId !== null && userPerms.students !== false },
+    { name: isTeacher ? 'Öğrencilerim' : 'Öğrenciler', href: '/students', icon: '/images/student.png', show: user.organizationId !== null && userPerms.students !== false },
     { name: 'Eğitim Talepleri', href: '/requests', icon: BookOpen, show: user.organizationId !== null && !isTeacher && userPerms.requests !== false },
     { 
       name: isTeacher ? 'Ders Programım' : 'Planlama ve Takvim', 
@@ -145,7 +145,11 @@ export default async function DashboardLayout({ children }: { children: ReactNod
                   scroll={false}
                   className="group flex items-center px-3 py-2 text-[14px] font-medium rounded-xl transition-all duration-300 hover:bg-white hover:shadow-sm hover:-translate-y-0.5 hover:text-[#004aad] text-gray-600"
                 >
-                  <item.icon className="mr-3 flex-shrink-0 h-[18px] w-[18px] text-[#004aad]/70 group-hover:text-[#004aad] transition-colors duration-300" strokeWidth={2.5} />
+                  {typeof item.icon === 'string' ? (
+                    <img src={item.icon} alt={item.name} className="mr-3 flex-shrink-0 h-[18px] w-[18px] object-contain opacity-70 group-hover:opacity-100 transition-opacity duration-300" />
+                  ) : (
+                    <item.icon className="mr-3 flex-shrink-0 h-[18px] w-[18px] text-[#004aad]/70 group-hover:text-[#004aad] transition-colors duration-300" strokeWidth={2.5} />
+                  )}
                   <span className="flex-1 truncate tracking-tight">{item.name}</span>
                 </Link>
                 {item.subItems && (
