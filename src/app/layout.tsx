@@ -11,22 +11,6 @@ const font = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   title: "birimO App - Birebir Eğitim Platformu",
   description: "Modern, Premium Eğitim Yönetim Platformu",
-  openGraph: {
-    title: "birimO App - Birebir Eğitim Platformu",
-    description: "Modern, Premium Eğitim Yönetim Platformu",
-    url: "https://www.birimo.ableajans.com",
-    siteName: "birimO App",
-    images: [
-      {
-        url: "/images/Logo.png",
-        width: 300,
-        height: 100,
-        alt: "birimO Logo",
-      },
-    ],
-    locale: "tr_TR",
-    type: "website",
-  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
